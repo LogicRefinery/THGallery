@@ -1,4 +1,4 @@
-import { Photo, PhotoResponse } from "./../(willog)/_model/photos";
+import { Photo, PhotoResponse } from "../(thgallery)/_model/photos";
 export function getStorage(imageId: string): Photo {
   const storageData = window?.localStorage?.getItem(imageId);
   const parseData = storageData ? JSON.parse(storageData) : {};
