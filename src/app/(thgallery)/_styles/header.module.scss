@@ -9,6 +9,13 @@
       order: 1;
       h1 {
         margin: 0;
+        a {
+          color: #666;
+          transition: all 0.2;
+          &:hover {
+            color: #111;
+          }
+        }
       }
     }
 
