@@ -11,14 +11,7 @@ const Header: () => React.JSX.Element = () => {
       <div className={styles.header_wrap}>
         <div className={styles.logo_wrap}>
           <h1>
-            <Link href="/">
-              <Image
-                src="/logo_black.png"
-                alt="willog"
-                width={103}
-                height={30}
-              ></Image>
-            </Link>
+            <Link href="/">ThGallery</Link>
           </h1>
         </div>
         <Suspense fallback={<div>...loading</div>}>
