@@ -9,28 +9,8 @@ const Main = ({ searchParams }: { searchParams: SearchParams }) => {
     <main>
       <Visual />
       <Images searchParams={searchParams} />
-      {/* <Images searchParams={searchParams}></Images> */}
     </main>
   );
 };
 
 export default Main;
-
-// const Main: ({
-//   searchParam,
-// }: {
-//   searchParam: { [key: string]: string };
-// }) => React.JSX.Element = ({
-//   searchParam,
-// }: {
-//   searchParam: { [key: string]: string };
-// }) => {
-//   return (
-//     <main>
-//       <Visual />
-//       <Images searchParam={searchParam} />
-//     </main>
-//   );
-// };
-
-// export default Main;

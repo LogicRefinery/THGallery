@@ -38,21 +38,6 @@ const ImagesRender = ({ images }: { images: PhotoResponse }) => {
         <div>검색된 이미지가 없습니다.</div>
       )}
 
-      {/*
-      모달 컴포넌트
-      
-      1. 기본 모달의 상태 : 비활성화
-      2. 각 이미지를 클릭하면 모달 컴포넌트 활성화
-      3. 모달 컴포넌트에게 줄 props = 모달의 상태를 바꿀 함수, 이미지 정보
-
-      createPotal(children, DomNode)
-
-      1.첫번째 인자 : 포탈을 태울 모든 리액트 자원
-      2.두번째 인자 : 포탈에 태운 자원을 렌더링 할 DOM Node
-      
-      주의사항 : 포탈의 이벤트는 DOM 트리가 아닌 React 트리에 따라 전파 됩니다.
-
-      */}
       {modalState &&
         createPortal(
           <Modal

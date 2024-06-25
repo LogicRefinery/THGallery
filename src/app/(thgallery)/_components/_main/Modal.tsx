@@ -8,25 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faX } from "@fortawesome/free-solid-svg-icons";
 import useHeartToggle from "../../_hooks/useHeartToggle";
 
-/*
-  좋아요버튼의 두 가지 상황
-  1. 모달창 오픈 : 모달창 열었을 때 좋아요 상태를 확인하고 그에 맞는 클래스명을 삽입한다.
-  2. 좋아요 버튼 클릭 : 좋아요 상태를 변경한다.
-*/
-
-/*
-타입스크립트 타입정의는 어디어디 해야되나요 ?
-
-함수 : 매개변수 , 반환은 추론으로 보통 감
-객채 : 속성
-배열 : 요소
-변수 : 
-
-props,
-state, 제네릭사용
-
-*/
-
 const Modal = ({ onClose, image }: { onClose: () => void; image: Photo }) => {
   const { heart, toggle } = useHeartToggle(image);
 

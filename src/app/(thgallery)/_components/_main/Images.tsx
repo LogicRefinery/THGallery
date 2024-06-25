@@ -13,9 +13,6 @@ type Option = {
 };
 
 const Images = async ({ searchParams }: { searchParams: SearchParams }) => {
-  // if (!searchParams.page) {
-  //   throw new Error("searchParams가 없습니다.");
-  // }
   const option: Option = {
     searchParams,
     page: +searchParams.page!,
