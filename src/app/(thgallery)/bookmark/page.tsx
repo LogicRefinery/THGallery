@@ -1,27 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./styles/bookmark.module.scss";
-import { getStorage } from "@/app/_utill/utills";
 import Image from "next/image";
-import ImagesRender from "../_components/_main/ImagesRender";
-import { Photo, PhotoResponse } from "../_model/photos";
+import { Photo } from "../_model/photos";
 import { createPortal } from "react-dom";
 import Modal from "../_components/_main/Modal";
-
-/*
-  1. 로컬스토리지에 내가 저장해둔 모든 이미지를 가져온다.
-  2. 다른 데이터가 있을 수 있으니, key값과 value.id 가 같은것만 가져오면 될듯.
-
-  가져오는 방법
-  1. 로컬스토리지 객체에 모든 키 값을 취득한다. Object.keys 사용하면 모든 키값을 배열로 반환해줌
-  2. 
-  
-*/
 
 const Page = () => {
   const [modalState, setModalState] = useState<boolean>(false);
   const [imageInfo, setImageInfo] = useState<Photo>();
   const [storageData, setStorageData] = useState<Photo[]>([]);
+
+  const updateStorageData = (id: string) => {
+    setStorageData((prevData) => prevData.filter((image) => image.id !== id));
+    setModalState(false);
+  };
 
   useEffect(() => {
     const storageKeys: string[] | null = Object.keys(localStorage);
@@ -82,6 +75,7 @@ const Page = () => {
                   setModalState(false);
                 }}
                 image={imageInfo}
+                updateStorageData={updateStorageData}
               />,
               document.body
             )}

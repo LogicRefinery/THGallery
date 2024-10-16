@@ -1,15 +1,23 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "../../../_styles/modal.module.scss";
-import { Photo, PhotoResponse } from "../../_model/photos";
+import { Photo } from "../../_model/photos";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faX } from "@fortawesome/free-solid-svg-icons";
 import useHeartToggle from "../../_hooks/useHeartToggle";
 
-const Modal = ({ onClose, image }: { onClose: () => void; image: Photo }) => {
-  const { heart, toggle } = useHeartToggle(image);
+const Modal = ({
+  onClose,
+  image,
+  updateStorageData,
+}: {
+  onClose: () => void;
+  image: Photo;
+  updateStorageData: (id: string) => void;
+}) => {
+  const { heart, toggle } = useHeartToggle(image, updateStorageData);
 
   return (
     <div className={styles.modal_wrap}>

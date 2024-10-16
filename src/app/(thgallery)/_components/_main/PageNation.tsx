@@ -20,8 +20,6 @@ const PageNation = ({
   images: Record<string, unknown> | PhotoResponse;
 }) => {
   const btnPerPage = 5; //한 페이지에 보여주고자 하는 페이지 버튼 갯수
-  const contentsPerPage = option.per_page; //한 페이지에 보여주고자 하는 컨텐츠의 갯수
-  const totalContents = images.total; //전체 이미지 수
   const totalPages = images.total_pages as number; //전체 페이지 수
   const pageGroup = Math.ceil(option.page / btnPerPage); //현재 화면에 보여질 페이지 그룹 1 ~ 5 / 6 ~ 10 / 11 ~ 15
   const pageGroupFirstNumber = (pageGroup - 1) * btnPerPage + 1; //페이지그룹 첫번째 숫자
