@@ -15,7 +15,7 @@ const Modal = ({
 }: {
   onClose: () => void;
   image: Photo;
-  updateStorageData: (id: string) => void;
+  updateStorageData?: (id: string) => void;
 }) => {
   const { heart, toggle } = useHeartToggle(image, updateStorageData);
 
