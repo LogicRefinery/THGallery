@@ -46,7 +46,6 @@ const Page = () => {
           <ul>
             {storageData &&
               storageData?.map((image) => {
-                if (!image) return;
                 return (
                   <li
                     key={image.id}
