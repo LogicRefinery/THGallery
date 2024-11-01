@@ -1,10 +1,18 @@
+.modal_overay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+}
 .modal_wrap {
   background-color: white;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   width: 800px;
   height: 800px;
   display: flex;
@@ -26,7 +34,20 @@
     }
   }
   .description_area {
-    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        span {
+          font-weight: bold;
+          color: #666;
+        }
+      }
+    }
   }
   .btn_area {
     position: absolute;
@@ -52,6 +73,38 @@
       #unlike {
         color: white;
         font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal_overay {
+  }
+  .modal_wrap {
+    width: 80%;
+    height: 600px;
+
+    .image_area {
+      .image {
+      }
+    }
+    .description_area {
+      ul {
+        li {
+        }
+      }
+    }
+    .btn_area {
+      .close_btn {
+        .close_icon {
+        }
+      }
+      .like_btn {
+        #like {
+        }
+        #unlike {
+        }
       }
     }
   }

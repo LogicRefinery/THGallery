@@ -23,3 +23,34 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .bookmark_wrap {
+    .title_area {
+    }
+    .image_area {
+      ul {
+        li {
+          flex-basis: calc(50% - 10px);
+          img {
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .bookmark_wrap {
+    .title_area {
+    }
+    .image_area {
+      ul {
+        li {
+          flex-basis: calc(100% - 10px);
+          img {
+          }
+        }
+      }
+    }
+  }
+}
