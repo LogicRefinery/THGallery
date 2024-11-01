@@ -6,6 +6,7 @@
   align-items: center;
   .visual_wrap {
     color: white;
+    width: 50%;
     h2 {
       font-size: 80px;
     }
@@ -14,12 +15,9 @@
       margin-bottom: 30px;
     }
     #search {
-      background-color: white;
-      border-radius: 10px 0 0 10px;
-      border-right: none;
       border: white;
+      flex: 1;
       padding: 20px;
-      width: 90%;
       &::placeholder {
         font-size: 16px;
         color: #999;
@@ -27,21 +25,20 @@
       }
     }
     #search_submit {
-      width: 10%;
       background-color: white;
-      padding: 20px;
-      border-radius: 0 10px 10px 0;
-      border-left: none;
       border: white;
       cursor: pointer;
+      padding: 0 20px;
+      border-left: 1px solid #999;
     }
     .search_fieldset {
       display: flex;
-      width: 800px;
       border: 0;
       padding: 0;
       background-color: white;
       border-radius: 10px;
+      overflow: hidden;
+      justify-content: space-between;
     }
   }
 }
@@ -54,7 +51,6 @@
       ul {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-evenly;
         li {
           cursor: pointer;
           position: relative;
@@ -105,43 +101,175 @@
           }
         }
       }
-      // display: flex;
-      // justify-content: center;
-      // text-decoration: none;
-      // font-style: normal;
-      // ul {
-      //   flex-wrap: nowrap;
-      //   li {
-      //     display: flex;
-      //     margin: 0;
-      //     .active {
-      //       color: #333;
-      //       font-weight: bold;
-      //     }
-      //     a {
-      //       color: #999;
-      //       display: flex;
-      //       align-items: center;
-      //       padding: 0 5px;
-      //       margin: 0 5px;
-      //     }
-      //   }
-      // }
     }
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .visual_section {
     .visual_wrap {
-      .search_fieldset {
-        width: 400px;
-        #search {
-          padding: 20px 10px;
+      h2 {
+      }
+      p {
+      }
+      #search {
+        &::placeholder {
         }
-        #search_submit {
-          padding: 0;
-          padding-right: 10px;
+      }
+      #search_submit {
+      }
+      .search_fieldset {
+      }
+    }
+  }
+
+  .images_section {
+    .images_wrap {
+      .images {
+        ul {
+          li {
+            flex-basis: calc(50% - 10px);
+          }
+        }
+      }
+      .page_nation {
+        .prev_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .page_nation_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .next_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .visual_section {
+    .visual_wrap {
+      h2 {
+      }
+      p {
+      }
+      #search {
+        &::placeholder {
+        }
+      }
+      #search_submit {
+      }
+      .search_fieldset {
+      }
+    }
+  }
+
+  .images_section {
+    .images_wrap {
+      .images {
+        ul {
+          li {
+            flex-basis: calc(100% - 10px);
+          }
+        }
+      }
+      .page_nation {
+        .prev_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .page_nation_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .next_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .visual_section {
+    .visual_wrap {
+      width: 80%;
+      h2 {
+      }
+      p {
+      }
+      #search {
+        &::placeholder {
+        }
+      }
+      #search_submit {
+      }
+      .search_fieldset {
+      }
+    }
+  }
+
+  .images_section {
+    .images_wrap {
+      .images {
+        ul {
+          li {
+          }
+        }
+      }
+      .page_nation {
+        .prev_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .page_nation_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
+        }
+        .next_buttons {
+          ul {
+            li {
+              a {
+              }
+            }
+          }
         }
       }
     }

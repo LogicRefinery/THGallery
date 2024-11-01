@@ -34,18 +34,4 @@ export const nav_menu: Nav_Menu = [
     path: "/?path=pattern&page=1",
     pathname: "pattern",
   },
-  {
-    id: 9,
-    name: "건축 및 인테리어",
-    path: "/?path=build&page=1",
-    pathname: "build",
-  },
-  { id: 10, name: "필름", path: "/?path=film&page=1", pathname: "film" },
-  { id: 11, name: "거리 사진", path: "/?path=load&page=1", pathname: "load" },
-  {
-    id: 12,
-    name: "실험적인",
-    path: "/?path=testing&page=1",
-    pathname: "testing",
-  },
 ];
