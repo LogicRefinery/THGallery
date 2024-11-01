@@ -17,20 +17,22 @@ const Page = () => {
   };
 
   useEffect(() => {
-    const storageKeys: string[] | null = Object.keys(localStorage);
+    if (typeof window !== "undefined") {
+      const storageKeys: string[] | null = Object.keys(localStorage);
 
-    if (storageKeys !== null) {
-      const loadedData: Photo[] = [];
-      storageKeys.forEach((key: string) => {
-        const localdata = localStorage.getItem(key);
-        if (localdata) {
-          const parsedData: Photo = JSON.parse(localdata);
-          if (parsedData.id === key) {
-            loadedData.push(parsedData);
+      if (storageKeys !== null) {
+        const loadedData: Photo[] = [];
+        storageKeys.forEach((key: string) => {
+          const localdata = localStorage.getItem(key);
+          if (localdata) {
+            const parsedData: Photo = JSON.parse(localdata);
+            if (parsedData.id === key) {
+              loadedData.push(parsedData);
+            }
           }
-        }
-      });
-      setStorageData(loadedData);
+        });
+        setStorageData(loadedData);
+      }
     }
   }, []);
 
