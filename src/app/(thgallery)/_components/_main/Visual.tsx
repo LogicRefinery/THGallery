@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../../_styles/main.module.scss";
 import SearchForm from "./SearchForm";
 
@@ -12,7 +12,9 @@ const Visual: () => React.JSX.Element = () => {
           <br />
           모든 지역에 있는 크리에이터들의 지원을 받습니다.
         </p>
-        <SearchForm />
+        <Suspense fallback={<div>...loading</div>}>
+          <SearchForm />
+        </Suspense>
       </div>
     </section>
   );
