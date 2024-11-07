@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React from "react";
 import Header from "./_components/_header/Header";
 
 const layout = ({ children }: { children: React.ReactNode }) => {

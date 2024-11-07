@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "./Nav";
 import TopMenu from "./TopMenu";
 import Link from "next/link";
@@ -47,9 +47,7 @@ const Header: () => React.JSX.Element = () => {
             <Link href="/">ThGallery</Link>
           </h1>
         </div>
-        <Suspense fallback={<div>...loading</div>}>
-          <Nav isMobile={isMobile} isOpen={isOpen} toggleMenu={toggleMenu} />
-        </Suspense>
+        <Nav isMobile={isMobile} isOpen={isOpen} toggleMenu={toggleMenu} />
         <TopMenu isMobile={isMobile} />
       </div>
     </header>
