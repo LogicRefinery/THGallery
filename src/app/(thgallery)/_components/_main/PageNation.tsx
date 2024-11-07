@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Photo, PhotoResponse } from "../../_model/photos";
+import { PhotoResponse } from "../../_model/photos";
 import Link from "next/link";
 import styles from "../../_styles/main.module.scss";
 import { useRouter } from "next/navigation";
@@ -76,7 +76,11 @@ const PageNation = ({
           ) : null}
 
           {renderPageGroup.length === 0 ? (
-            <li>0</li>
+            <li>
+              <Link href="#" onClick={(event) => event.preventDefault()}>
+                0
+              </Link>
+            </li>
           ) : (
             renderPageGroup.map((item) => (
               <li key={item}>

@@ -1,6 +1,6 @@
 .visual_section {
   height: 400px;
-  background-image: url("../../../../public/visual.jpg");
+  background-image: url("../../../../public/visual.webp");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,12 +65,11 @@
       justify-content: center;
       color: #999;
       .prev_buttons {
-        margin: 0 10px;
         ul {
           display: flex;
           li {
-            margin: 0 5px;
             a {
+              padding: 0 10px;
               display: flex;
               color: #999;
             }
@@ -81,8 +80,8 @@
         ul {
           display: flex;
           li {
-            margin: 0 5px;
             a {
+              padding: 0 10px;
               display: flex;
               color: #999;
             }
@@ -93,9 +92,9 @@
         ul {
           display: flex;
           li {
-            margin: 0 5px;
             a {
               display: flex;
+              padding: 0 10px;
               color: #999;
             }
           }

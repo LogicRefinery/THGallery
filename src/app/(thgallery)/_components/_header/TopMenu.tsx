@@ -9,7 +9,7 @@ const TopMenu = ({ isMobile }: { isMobile: boolean }) => {
       <ul className={styles.top_menu_action}>
         <li>
           <Link href="/bookmark">
-            <BsBookmarkHeart size={38}></BsBookmarkHeart>
+            <BsBookmarkHeart size={38} aria-label="bookmark" />
           </Link>
         </li>
       </ul>

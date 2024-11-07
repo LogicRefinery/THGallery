@@ -20,6 +20,7 @@ const Images = async ({ searchParams }: { searchParams: SearchParams }) => {
   };
 
   const images: PhotoResponse | undefined = await useGetImage(option);
+  const isSearchParams = Object.keys(searchParams).length;
 
   return (
     <section className={styles.images_section}>
@@ -27,7 +28,9 @@ const Images = async ({ searchParams }: { searchParams: SearchParams }) => {
         <div className={styles.images}>
           <ul>{images && <ImagesRender images={images} />}</ul>
         </div>
-        {images && <PageNation option={option} images={images} />}
+        {isSearchParams && images && (
+          <PageNation option={option} images={images} />
+        )}
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ const useGetImage = async ({ searchParams, page, per_page }: Option) => {
       `https://api.unsplash.com/search/photos?query=${searchWord}&client_id=ad8wmdT33loR6FrMfafHvyt6ZtRYhxd5wBivponnLpM&page=${pageNumber}&per_page=${per_page}`,
       {
         method: "GET",
-        cache: "no-store",
+        // cache: "no-store",
       }
     );
     if (!res.ok) {
