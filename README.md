@@ -16,4 +16,5 @@ Unsplash API를 이용해 갤러리를 구현하였습니다.
 ![image](https://github.com/user-attachments/assets/d86ab664-0096-45ed-a8d3-f5c34d769f2b)
 
 
----
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=64d8fe&height=150&section=footer" />
